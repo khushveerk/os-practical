@@ -1,3 +1,6 @@
+/*12. write a program to implement first-fit, best-fit and worst-fit
+allocation strategies.*/
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
