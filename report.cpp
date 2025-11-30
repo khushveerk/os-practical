@@ -1,8 +1,10 @@
 /* 4. Write a program to report behaviour of Linux kernel including kernel
-version, CPU type and model. (CPU information)*/
+version, CPU type and model. (CPU information)
+for creating this file in terminal - nano report.cpp , then ctrl+O+enter , then ctrl+x
+, thrn cat nano report.cpp */
 
 #include <iostream>
-#include stdlib>
+#include <stdlib.h>
 using namespace std;
 
 int main() {
