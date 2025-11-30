@@ -1,3 +1,5 @@
+// for practical 2 - process control cmd
+
 #include <iostream>
 #include <unistd.h>     // For fork()
 #include <sys/types.h>  // For pid_t
