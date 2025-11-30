@@ -1,3 +1,6 @@
+/*7. Write a program to implement first-come, first-served FCFS
+scheduling algorithm in CPP code.*/
+
 #include <iostream>
 #include <vector>
 #include <algorithm>
