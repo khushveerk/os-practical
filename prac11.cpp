@@ -1,3 +1,7 @@
+/*11. Write a program to calculate sum of n numbers using pthreads. A
+list of n numbers is divided into two smaller lists of equal size. Two
+separate threads are used to run the sublist.*/
+
 #include <iostream>
 #include <vector>
 #include <pthread.h>
