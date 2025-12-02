@@ -160,7 +160,31 @@ int main() {
 memory, amount of free and used memory. (Memory informa on)
 
   file name - memory.cpp*/
+#include <fstream>
+#include <string>
+#include <iostream>
+using namespace std;
 
+int main() {
+    ifstream file("/proc/meminfo");
+    string line;
+
+    if (!file) {
+        cout << "Error opening /proc/meminfo" << endl;
+        return 1;
+    }
+
+    cout << "----memory information----" << endl;
+
+    int count = 0;
+    while (getline(file, line) && count < 5) {
+        cout << line << endl;
+        count++;
+    }
+
+    file.close();
+    return 0;
+}
 
 /* 6. write a program to copy files using system calls.
 
