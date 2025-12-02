@@ -13,7 +13,6 @@ these two are used for all the que-
 practical 2 -ii.Process Control: fork, getpid, ps, kill, sleep. 
 
  file name - fork.cpp */
-// for practical 2 - process control cmd
 
 #include <iostream>
 #include <unistd.h>     // For fork()
@@ -135,11 +134,27 @@ int main() {
 }
 
 /* 4. Write a program to report behaviour of Linux kernel including kernel
-version, CPU type and model. (CPU informa on) 
+version, CPU type and model. (CPU information) 
 
 
   file name - report.cpp */ 
 
+#include <iostream>
+#include <stdlib.h>
+using namespace std;
+
+int main() {
+    cout << "--- Kernel information ---" << endl;
+    system("uname -s");
+    system("uname -r");
+    system("uname -v");
+    system("uname -m");
+
+    cout << "\n--- CPU information ---" << endl;
+    system("lscpu");
+
+    return 0;
+}
 
 /* 5. Write a program to report behaviour of Linux kernel including configured
 memory, amount of free and used memory. (Memory informa on)
@@ -156,7 +171,6 @@ memory, amount of free and used memory. (Memory informa on)
          -3 ./copy_syscalls src.txt dst.txt
          -4 cat dst.txt 
          */
-/*6. write a program to copy files using system calls.*/
 
 #include <iostream>
 #include <fstream>
@@ -251,8 +265,6 @@ int main(int argc, char *argv[]) {
 algorithm in CPP code.
 
   fule name - fcfs.cpp */ 
-/*7. Write a program to implement first-come, first-served FCFS
-scheduling algorithm in CPP code.*/
 
 #include <iostream>
 #include <vector>
