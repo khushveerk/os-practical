@@ -3,8 +3,10 @@
 ## in every practical cmds used - 
 1-  nano filename.cpp  --- Press Ctrl + O → then hit -- Enter -- Then press Ctrl + X → this eXits nano.
 2-  cat filename.cpp 
-3-  g++ filename.cpp -o filename
-4-  ./filename
+
+these two are used for all the que-
+3-  g++ filename.cpp -o filename   
+4-  ./filename  
 
 
 
@@ -32,7 +34,13 @@ memory, amount of free and used memory. (Memory informa on)
 
 
 /* 6. write a program to copy files using system calls.
-  file name - cpoy_sytemcalls.cpp */
+  file name - copy_sytemcalls.cpp  */ 
+
+/*  cmds -1 g++ copy_syscalls.cpp -o copy_syscalls
+         -2 echo "hello os lab" > src.txt
+         -3 ./copy_syscalls src.txt dst.txt
+         -4 cat dst.txt
+
 
 
 /* 7. Write a program to implement first-come, first-served FCFS scheduling
