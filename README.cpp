@@ -13,11 +13,95 @@ these two are used for all the que-
 practical 2 -ii.Process Control: fork, getpid, ps, kill, sleep. 
 
  file name - fork.cpp */
+// for practical 2 - process control cmd
 
+#include <iostream>
+#include <unistd.h>     // For fork()
+#include <sys/types.h>  // For pid_t
+
+using namespace std;
+
+int main() {
+    cout << "I am the single parent. About to fork..." << endl;
+
+    pid_t pid = fork();
+
+    if (pid < 0) {
+        // Error occurred
+        cerr << "Fork failed" << endl;
+        return 1;
+    } 
+    else if (pid == 0) {
+        // Child process
+        cout << "Child: Hello from the C++ CHILD process! (PID: " << getpid() << ")" << endl;
+    } 
+    else {
+        // Parent process
+        cout << "Parent: Hello from the C++ PARENT process! (Child's PID: " << pid << ")" << endl;
+    }
+
+    return 0;
+}
 
 
 /* 3. Write a programme (using fork() and/or exec() commands) where parent 
  same as previous */
+// for practical 2 - process control cmd
+
+#include <iostream>
+#include <unistd.h>     // For fork()
+#include <sys/types.h>  // For pid_t
+
+using namespace std;
+
+int main() {
+    cout << "I am the single parent. About to fork..." << endl;
+
+    pid_t pid = fork();
+
+    if (pid < 0) {
+        // Error occurred
+        cerr << "Fork failed" << endl;
+        return 1;
+    } 
+    else if (pid == 0) {
+        // Child process
+        cout << "Child: Hello from the C++ CHILD process! (PID: " << getpid() << ")" << endl;
+    } 
+    else {
+        // Parent process
+        cout << "Parent: Hello from the C++ PARENT process! (Child's PID: " << pid << ")" << endl;
+    }
+
+    return 0;
+}     
+
+//    ----------------or  ------------------------------------   
+
+
+#include <stdio.h>
+#include <unistd.h>   // fork, getpid
+#include <sys/types.h>
+
+int main() {
+    pid_t pid;
+
+    printf("Before fork, in main process. PID = %d\n", getpid());
+
+    pid = fork();     // create a new process
+
+    if (pid < 0) {
+        printf("Fork failed\n");
+    } else if (pid == 0) {
+        // Child process
+        printf("Child process:  PID = %d, Parent PID = %d\n", getpid(), getppid());
+    } else {
+        // Parent process
+        printf("Parent process: PID = %d, Child PID  = %d\n", getpid(), pid);
+    }
+
+    return 0;
+}
 
 
 /* 3.iii. Before terminating, the parent waits for the child to finish its task.
